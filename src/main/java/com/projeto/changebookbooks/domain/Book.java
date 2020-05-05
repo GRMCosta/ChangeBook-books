@@ -16,7 +16,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table
 public class Book extends AbstractEntity implements Serializable {
 
     @Id
@@ -44,7 +43,7 @@ public class Book extends AbstractEntity implements Serializable {
 
     @NotNull
     private boolean isForSell;
-//    TODO
-//    @NotBlank
-//    private UserResponse user;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private UserResponse userId;
 }
