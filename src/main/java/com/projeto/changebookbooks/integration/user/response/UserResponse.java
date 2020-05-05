@@ -5,6 +5,7 @@ import com.projeto.changebookbooks.config.Messages;
 import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -27,7 +28,6 @@ public class UserResponse {
     @NotBlank(message = Messages.CITY_IS_REQUIRED)
     private String city;
 
-    @Id
     @Email
     @NotBlank(message = Messages.EMAIL_IS_REQUIRED)
     private String email;

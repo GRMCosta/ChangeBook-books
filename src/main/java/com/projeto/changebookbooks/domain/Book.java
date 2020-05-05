@@ -44,7 +44,7 @@ public class Book extends AbstractEntity implements Serializable {
 
     @NotNull
     private boolean isForSell;
-
-    @NotBlank
-    private UserResponse user;
+//    TODO
+//    @NotBlank
+//    private UserResponse user;
 }
