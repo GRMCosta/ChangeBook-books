@@ -1,5 +1,6 @@
 package com.projeto.changebookbooks.domain;
 
+import com.projeto.changebookbooks.integration.user.response.UserResponse;
 import lombok.*;
 import org.dom4j.tree.AbstractEntity;
 import org.hibernate.annotations.GenericGenerator;
@@ -45,5 +46,5 @@ public class Book extends AbstractEntity implements Serializable {
     private boolean isForSell;
 
     @NotBlank
-    private String userId;
+    private UserResponse user;
 }
