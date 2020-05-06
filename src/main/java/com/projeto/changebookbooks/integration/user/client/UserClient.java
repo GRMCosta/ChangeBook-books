@@ -1,6 +1,6 @@
 package com.projeto.changebookbooks.integration.user.client;
 
-import com.projeto.changebookbooks.integration.user.response.UserResponse;
+import com.projeto.changebookbooks.integration.user.response.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,5 +13,5 @@ public interface UserClient {
     String validateToken(@RequestHeader("Authorization") String token);
 
     @RequestMapping(method = RequestMethod.GET, value = "/user/by_token")
-    UserResponse getUserByToken(@RequestHeader("Authorization") String token);
+    User getUserByToken(@RequestHeader("Authorization") String token);
 }

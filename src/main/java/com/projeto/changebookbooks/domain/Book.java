@@ -1,14 +1,13 @@
 package com.projeto.changebookbooks.domain;
 
-import com.projeto.changebookbooks.integration.user.response.UserResponse;
+import com.projeto.changebookbooks.config.Messages;
+import com.projeto.changebookbooks.integration.user.response.User;
 import lombok.*;
-import org.dom4j.tree.AbstractEntity;
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 
 @Getter
 @Setter
@@ -16,34 +15,38 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Book extends AbstractEntity implements Serializable {
+public class Book {
 
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @NotBlank
+    @NotBlank(message = Messages.NAME_IS_REQUIRED)
     private String name;
 
-    @NotBlank
+    @NotBlank(message = Messages.AUTHOR_NAME_IS_REQUIRED)
     private String authorName;
 
-    @NotBlank
+    @NotBlank(message = Messages.EDITOR_NAME_IS_REQUIRED)
     private String editorName;
 
-    @NotBlank
+    @NotBlank(message = Messages.DESCRIPTION_IS_REQUIRED)
     private String description;
 
-    @NotNull
-    private boolean isForTrade;
+    @NotBlank(message = Messages.CATEGORY_IS_REQUIRED)
+    private String category;
 
-    @NotBlank
+    @NotNull(message = Messages.IS_FOR_TRADE_IS_REQUIRED)
+    private Boolean isForTrade;
+
+    @NotBlank(message = Messages.TRADE_DESCRIPTION_IS_REQUIRED)
     private String tradeDescription;
 
-    @NotNull
-    private boolean isForSell;
+    @NotNull(message = Messages.IS_FOR_SELL_IS_REQUIRED)
+    private Boolean isForSell;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private UserResponse userId;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }

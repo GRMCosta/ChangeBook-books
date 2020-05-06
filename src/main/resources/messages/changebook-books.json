@@ -17,42 +17,56 @@
     "412.2": {
       "code": "412.2",
       "httpStatus": 412,
-      "description": "email is required."
+      "description": "authorName is required."
     }
   },
   {
     "412.3": {
       "code": "412.3",
       "httpStatus": 412,
-      "description": "cpf is required."
+      "description": "editorName is required."
     }
   },
   {
     "412.4": {
       "code": "412.4",
       "httpStatus": 412,
-      "description": "city is required."
+      "description": "description is required."
     }
   },
   {
     "412.5": {
       "code": "412.5",
       "httpStatus": 412,
-      "description": "password is required."
+      "description": "isForTrade is required."
     }
   },
   {
     "412.6": {
       "code": "412.6",
       "httpStatus": 412,
-      "description": "phone is required."
+      "description": "tradeDescription is required."
+    }
+  },
+  {
+    "412.7": {
+      "code": "412.7",
+      "httpStatus": 412,
+      "description": "isForSell is invalid."
+    }
+  },
+  {
+    "412.8": {
+      "code": "412.8",
+      "httpStatus": 412,
+      "description": "category is required."
     }
   },
   {
     "422.1": {
       "code": "422.1",
       "httpStatus": 422,
-      "description": "cpf is invalid."
+      "description": "Book not found."
     }
   }
 ]
