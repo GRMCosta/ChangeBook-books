@@ -6,6 +6,7 @@ public final class Messages {
     }
 
 
+
     //500
     public static final String INTERNAL_SERVER_ERROR = "500";
 
@@ -24,6 +25,8 @@ public final class Messages {
     public static final String IS_FOR_SELL_IS_REQUIRED = "412.7";
 
     public static final String CATEGORY_IS_REQUIRED = "412.8";
+
+    public static final String IMAGE_IS_REQUIRED = "412.9";
 
     public static final String BOOK_NOT_FOUND = "422.1";
 }

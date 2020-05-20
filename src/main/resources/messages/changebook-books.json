@@ -63,6 +63,13 @@
     }
   },
   {
+    "412.9": {
+      "code": "412.9",
+      "httpStatus": 412,
+      "description": "image is required."
+    }
+  },
+  {
     "422.1": {
       "code": "422.1",
       "httpStatus": 422,
