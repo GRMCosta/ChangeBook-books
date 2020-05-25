@@ -20,7 +20,6 @@ public class BookController {
     @Autowired
     private UserClient userClient;
 
-
     @Autowired
     public BookController(BookService bookService) {
         this.bookService = bookService;
