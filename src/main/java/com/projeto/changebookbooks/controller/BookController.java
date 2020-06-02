@@ -34,6 +34,13 @@ public class BookController {
         bookService.createBook(user, book);
     }
 
+    @PutMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void updateBook(
+            @RequestBody @Valid Book book){
+        bookService.updateBook(book);
+    }
+
     @GetMapping
     public ResponseEntity<?> getBooks(@RequestHeader String Authorization){
         val user = userClient.getUserByToken(Authorization);

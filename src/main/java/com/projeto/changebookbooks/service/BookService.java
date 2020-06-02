@@ -28,6 +28,10 @@ public class BookService {
         bookRepository.save(book);
     }
 
+    public void updateBook(Book book) {
+        bookRepository.save(book);
+    }
+
     public List<Book> getBooks(User user) {
         return bookRepository.findAllByUser(user);
     }
