@@ -36,10 +36,8 @@ public class BookService {
         return bookRepository.findAllByUser(user);
     }
 
-    public Book getBookById(String bookId, User user) {
+    public Book getBookById(String bookId) {
         val book = bookRepository.findById(bookId).orElseThrow(() -> {throw new BookException(Messages.BOOK_NOT_FOUND);});
-        if (!book.getUser().getEmail().equals(user.getEmail()))
-            throw new BookException(Messages.BOOK_NOT_FOUND);
         return book;
     }
 

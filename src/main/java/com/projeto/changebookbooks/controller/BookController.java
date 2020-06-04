@@ -52,7 +52,7 @@ public class BookController {
             @PathVariable("bookId") String bookId,
             @RequestHeader String Authorization){
         val user = userClient.getUserByToken(Authorization);
-        return ResponseEntity.ok().body(bookService.getBookById(bookId,user));
+        return ResponseEntity.ok().body(bookService.getBookById(bookId));
     }
 
     @DeleteMapping("/{bookId}")
